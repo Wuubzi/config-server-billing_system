@@ -5,7 +5,7 @@ spring:
     name: msvc-eureka
 eureka:
   instance:
-    hostname: eureka-microservice
+    hostname: locahost
   client:
     register-with-eureka: false
     fetch-registry: false
