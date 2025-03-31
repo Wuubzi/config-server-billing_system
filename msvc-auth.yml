@@ -12,6 +12,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/billing_system
     username: postgres
     password: postgres
+  redis:
+    host: localhost
+    port: 6379
   jpa:
     hibernate:
       ddl-auto: update
