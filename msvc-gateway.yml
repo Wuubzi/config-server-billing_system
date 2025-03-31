@@ -28,7 +28,7 @@ spring:
           predicates:
           - Path=/api/auth/**
           filters:
-            - RewritePath=/movies/(?<segment>.*),/api/movies/$\{segment}
+            - RewritePath=/auth/(?<segment>.*),/api/auth/$\{segment}
          
           
 eureka:
