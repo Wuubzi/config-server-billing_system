@@ -24,7 +24,7 @@ spring:
      
       routes:
         - id: auth
-          uri: http://localhost:8060
+          uri: lb://msvc-auth
           predicates:
             - Path=/api/v1/auth/**
           filters:
