@@ -26,9 +26,10 @@ spring:
         - id: auth
           uri: lb://msvc-auth
           predicates:
-          - Path=/api/auth/**
+            - Path=/api/auth/**
           filters:
-            - RewritePath=/auth/(?<segment>.*),/api/auth/$\{segment}
+            - RewritePath=/api/auth/(?<segment>.*),/api/auth/$\{segment}
+            
          
           
 eureka:
