@@ -23,12 +23,12 @@ spring:
             maxAge: 3600
      
       routes:
-        - id: auth
-          uri: lb://msvc-auth
-          predicates:
-            - Path=/api/auth/**
-          filters:
-            - RewritePath=/api/auth/(?<segment>.*),/api/auth/$\{segment}
+       - id: auth
+       uri: lb://msvc-auth
+       predicates:
+        - Path=/api/auth/**
+       filters:
+         - StripPrefix=1
             
          
           
