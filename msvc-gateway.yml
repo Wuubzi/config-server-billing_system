@@ -27,8 +27,7 @@ spring:
           uri: lb://msvc-auth
           predicates:
             - Path=/api/v1/auth/**
-          filters:
-            - StripPrefix=1
+         
           
 eureka:
   instance:
