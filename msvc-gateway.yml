@@ -27,6 +27,8 @@ spring:
           uri: lb://msvc-auth
           predicates:
             - Path=/api/auth/**
+          filters:
+            - RewritePath=/movies/(?<segment>.*),/api/movies/$\{segment}
          
           
 eureka:
