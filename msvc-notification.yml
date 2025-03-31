@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: msvc-auth
+    name: msvc-notification
   rabbitmq:
     host: localhost
     port: 5672
