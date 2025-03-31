@@ -1,1 +1,20 @@
+server:
+  port: 8070
 
+spring:
+  application:
+    name: msvc-auth
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    
