@@ -5,9 +5,9 @@ spring:
   application:
     name: msvc-notification
   twilio:
-    account-sid: AC314452e027127811dc8c2b256beb907a
-    auth-token: 82985fd6a8dbaed48f2a5984ebb676b5
-    phone_number: +13305835239
+    account-sid: "AC314452e027127811dc8c2b256beb907a"
+    auth-token: "82985fd6a8dbaed48f2a5984ebb676b5"
+    phone_number: "+13305835239"
   rabbitmq:
     host: localhost
     port: 5672
