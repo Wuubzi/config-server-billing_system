@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: msvc-billing
+    name: msvc-suppliers
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/billing_system
