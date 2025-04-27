@@ -1,11 +1,12 @@
 server:
   port: 8000
+
 spring:
   application:
     name: msvc-gateway
   jwt:
     expiration: 604800000
-    secret: "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+    secret: ""
   cloud:
     gateway:
       globalcors:
@@ -21,7 +22,6 @@ spring:
             allowedHeaders: '*'
             allowCredentials: true
             maxAge: 3600
-     
       routes:
         - id: auth
           uri: lb://msvc-auth
@@ -35,22 +35,23 @@ spring:
           uri: lb://msvc-orders
           predicates:
             - Path=/api/v1/orders/**
-       - id: products
-         uri: lb://msvc-products
-         predicates:
+        - id: products
+          uri: lb://msvc-products
+          predicates:
             - Path=/api/v1/products/**
-       - id: purchases
-         uri: lb://msvc-purchases
-         predicates:
+        - id: purchases
+          uri: lb://msvc-purchases
+          predicates:
             - Path=/api/v1/purchases/**
-       - id: sales
-         uri: lb://msvc-sales
-         predicates:
+        - id: sales
+          uri: lb://msvc-sales
+          predicates:
             - Path=/api/v1/sales/**
-       - id: suppliers
-         uri: lb://msvc-suppliers
-         predicates:
+        - id: suppliers
+          uri: lb://msvc-suppliers
+          predicates:
             - Path=/api/v1/suppliers/**
+
 eureka:
   instance:
     hostname: localhost
