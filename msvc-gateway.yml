@@ -27,6 +27,30 @@ spring:
           uri: lb://msvc-auth
           predicates:
             - Path=/api/v1/auth/**
+        - id: billing
+          uri: lb://msvc-billing
+          predicates:
+            - Path=/api/v1/billing/**
+        - id: orders
+          uri: lb://msvc-orders
+          predicates:
+            - Path=/api/v1/orders/**
+       - id: products
+         uri: lb://msvc-products
+         predicates:
+            - Path=/api/v1/products/**
+       - id: purchases
+         uri: lb://msvc-purchases
+         predicates:
+            - Path=/api/v1/purchases/**
+       - id: sales
+         uri: lb://msvc-sales
+         predicates:
+            - Path=/api/v1/sales/**
+       - id: suppliers
+         uri: lb://msvc-suppliers
+         predicates:
+            - Path=/api/v1/suppliers/**
 eureka:
   instance:
     hostname: localhost
