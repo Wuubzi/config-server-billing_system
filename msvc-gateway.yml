@@ -39,6 +39,8 @@ spring:
           uri: lb://msvc-products
           predicates:
             - Path=/api/v1/products/**
+          filters:
+            - AuthFilter
         - id: purchases
           uri: lb://msvc-purchases
           predicates:
