@@ -31,10 +31,14 @@ spring:
           uri: lb://msvc-billing
           predicates:
             - Path=/api/v1/billing/**
+          filters:
+            - AuthFilter
         - id: orders
           uri: lb://msvc-orders
           predicates:
             - Path=/api/v1/orders/**
+          filters:
+            - AuthFilter
         - id: products
           uri: lb://msvc-products
           predicates:
@@ -45,14 +49,20 @@ spring:
           uri: lb://msvc-purchases
           predicates:
             - Path=/api/v1/purchases/**
+          filters:
+            - AuthFilter
         - id: sales
           uri: lb://msvc-sales
           predicates:
             - Path=/api/v1/sales/**
+          filters:
+            - AuthFilter
         - id: suppliers
           uri: lb://msvc-suppliers
           predicates:
             - Path=/api/v1/suppliers/**
+          filters:
+            - AuthFilter
 
 eureka:
   instance:
