@@ -64,7 +64,7 @@ spring:
           filters:
             - AuthFilter
         - id: users
-          uri: kb://msvc-users
+          uri: lb://msvc-users
           predicates:
             - Path=/api/v1/profile/**
           filters:
