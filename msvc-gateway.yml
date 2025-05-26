@@ -63,7 +63,12 @@ spring:
             - Path=/api/v1/suppliers/**
           filters:
             - AuthFilter
-
+        - id: users
+          uri: kb://msvc-users
+          predicates:
+            - Path=/api/v1/profile/**
+          filters:
+            - AuthFilter
 eureka:
   instance:
     hostname: localhost
