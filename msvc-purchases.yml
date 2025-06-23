@@ -1,25 +1,25 @@
 
 server:
-  port: 8060
+  port: ${SERVER_PORT}
 
 spring:
   application:
     name: msvc-purchases
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/billing_system
-    username: postgres
-    password: postgres
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
   redis:
-    host: localhost
-    port: 6379
+    host: ${REDIS_HOST}
+    port: ${REDIS_PORT}
   jpa:
     hibernate:
       ddl-auto: update
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+    host: ${RABBIT_HOST}
+    port: ${RABBIT_PORT}
+    username: ${RABBIT_USER}
+    password: ${RABBIT_PASSWORD}
