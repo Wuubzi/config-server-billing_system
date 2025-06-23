@@ -5,10 +5,10 @@ spring:
   application:
     name: msvc-notification
   rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest   
+    host: ${RABBIT_HOST}
+    port: ${RABBIT_PORT}
+    username: ${RABBIT_USER}
+    password: ${RABBIT_PASSWORD}
 eureka:
   client:
     service-url:
