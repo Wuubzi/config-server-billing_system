@@ -69,3 +69,9 @@ spring:
             - Path=/api/v1/profile/**
           filters:
             - AuthFilter
+        - id: categories
+          uri: lb://msvc-categories
+          predicates:
+            - Path=/api/v1/categories/**
+          filters:
+            - AuthFilter
